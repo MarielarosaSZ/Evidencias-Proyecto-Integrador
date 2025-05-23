@@ -22,7 +22,11 @@ function App() {
     const minProduct = Math.min(...filteredProducts.map((p) => p.price));
     const maxStock = Math.max(...filteredProducts.map((p) => p.stock));
     const minStock = Math.min(...filteredProducts.map((p) => p.stock));
+    const sumPrices = filteredProducts.reduce((sum, p) => sum + p.price, 0);
+    const avgPrice = sumPrices / totalProducts;
 
+    const sumStock = filteredProducts.reduce((sum, p) => sum + p.stock, 0)
+    const avgStock = sumStock / totalProducts;
 
     return (
         
@@ -71,8 +75,10 @@ function App() {
                 className="bg-green-200 p-6 rounded-lg shadow-xl border border-blue-200
                            max-w-3xl mx-auto mt-8" 
             >
-            <Stats total={totalProducts} max={maxProduct} min={minProduct} maxs={maxStock} mins={minStock}/>
-            </div>
+            <Stats total={totalProducts} max={maxProduct} min={minProduct} prom={avgPrice.toFixed()} 
+                totalS={sumStock} maxS={maxStock} minS={minStock} promS={avgStock.toFixed(0)}/>
+            
+              </div>
             )}
             {filteredProducts.length === 0 && <div> No se encontraron productos </div>}
         </div>
