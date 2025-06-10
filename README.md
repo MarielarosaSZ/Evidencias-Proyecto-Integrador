@@ -1,7 +1,9 @@
 # Evidencias-Proyecto-Integrador
 Evidencias de aprendizajes solicitadas por la cátedra Proyecto Integrador 2025
 
-# Dificultades y Disculpas
-Profe, me fue imposible hacer algo, nada me funciona. Nunca pude iniciar un nuevo proyecto. Quise retomar lo que había hecho de prueba y nada funcionó. Estuve dedicada a otras materias,dejé esta para el último por una cuestión de grupos y también porque creí que lo sabía hacer. Le pido disculpas y me voy a dedicar exclusivamente a esta materia esta semana para poder hacer el recuperatorio. 
-
-Le paso una captura de pantalla de lo que me mostró la pagina, con un archivo copiado para poder estudiar las partes cómo funcionaban. No fue posible agregarlo como archivo, la velocidad de tranferencia de datos de mi conexión hoy está casi nula.   https://drive.google.com/file/d/12R6w8xsvNW1P9D1NxcawT-5rMO9pX01Q/view?usp=sharing
+# Dificultades
+Costó instalar el entorno, tuve que forzar a la instalación de la versión 3 de Tailwind.
+No funcionan los estilos. Investigando y tocando pude observar en la terminal de inspección que no carga ningun archivo CSS.
+Revisé y no encontré que faltara ningun archivo ni ninguna importación.
+Ojalá me pueda decir donde está el error. Quizás para la próxima evidencia tenga que iniciar todo desde cero.
+Aprendí muchísimo, hasta el uso de Git que también me estaba costando, pero en las pocas horas que tengo para estudiar las dediqué exclusivamente a este trabajo.
