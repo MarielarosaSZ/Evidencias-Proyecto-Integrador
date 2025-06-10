@@ -1,4 +1,4 @@
-
+import React from 'react';
 function SearchBar({ search, setSearch }) {
   return (
     <div className="flex justify-center mb-6">

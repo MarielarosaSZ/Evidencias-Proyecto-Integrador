@@ -1,3 +1,4 @@
+import React from 'react';
 import ProductItem from "./ProductItems";
 
 function ProductList({ products }) {

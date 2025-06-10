@@ -1,5 +1,3 @@
-import React from "react";
-
 function ExportButtons({ products }) {
   const exportToJson = () => {
     const dataStr = JSON.stringify(products, null, 2);

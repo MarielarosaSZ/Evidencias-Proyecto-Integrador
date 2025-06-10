@@ -1,4 +1,4 @@
-
+import React from 'react';
 function ProductItem({ product }) {
   return (
     <div className="border border-gray-300 rounded-lg p-4 shadow-lg hover:shadow-xl transition-all duration-300 bg-white dark:bg-gray-700 dark:border-gray-600">

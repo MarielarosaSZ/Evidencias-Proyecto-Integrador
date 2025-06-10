@@ -1,6 +1,8 @@
+import React from 'react';
+
 import axios from "axios";
 import { useEffect, useState, useRef, useMemo } from "react";
-
+import './index.css';
 import Stats from "./components/Stats";
 import ProductList from "./components/ProductList";
 import SearchBar from "./components/SearchBar";
@@ -8,18 +10,20 @@ import FilterSortControls from "./components/FilterSortControls";
 import ProductCharts from "./components/ProductCharts"; // Nuevo componente para gráficos
 import ExportButtons from "./components/ExportButtons"; // Nuevo componente para exportación
 
+
+
 function App() {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [search, setSearch] = useState("");
-  const [showStats, setShowStats] = useState(true);
+  const [showStats, setShowStats] = useState(true); // no pude repetirlo en el boton de modo oscuro
   const [categoryFilter, setCategoryFilter] = useState("all");
-  const [sortBy, setSortBy] = useState("none"); // 'price-asc', 'price-desc', 'rating-asc', 'rating-desc'
+  const [sortBy, setSortBy] = useState("none"); 
   const [page, setPage] = useState(1);
-  const [productsPerPage] = useState(10); // Para paginación
+  const [productsPerPage] = useState(10); 
 
-  const appRef = useRef(null); // Para el modo oscuro (ejemplo simple)
+  const appRef = useRef(null); 
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -191,19 +195,21 @@ function App() {
   return (
     <div
       ref={appRef}
-      className="min-h-screen bg-blue-800 text-white font-sans p-4 md:p-8 transition-colors duration-300 dark:bg-gray-900 dark:text-gray-100"
+      className="min-h-screen bg-blue-600  font-sans p-4 md:p-8 transition-colors duration-300 dark:bg-gray-900 dark:text-gray-100"
     >
-      <h1 className="text-4xl font-extrabold text-green-700 text-center mb-8 dark:text-green-500">
-        Catálogo de Productos
+      <h1 className="text-4xl font-black text-orange-700 text-center mb-8 dark:text-green-500">
+        CATÁLOGOS DE PRODUCTOS
       </h1>
 
       <div className="flex justify-center mb-6">
         <button
           onClick={toggleDarkMode}
-          className="bg-gray-700 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline dark:bg-gray-200 dark:text-gray-900 dark:hover:bg-gray-300"
+          className="bg-gray-700 hover:bg-gray-600  font-bold py-2 px-4 rounded focus:outline-none 
+          focus:shadow-outline dark:bg-gray-200 dark:text-gray-900 dark:hover:bg-gray-300"
         >
-          Toggle Dark Mode
-        </button>
+          Modo Oscuro/Claro 
+        </button> 
+        
       </div>
 
       <SearchBar search={search} setSearch={setSearch} />
